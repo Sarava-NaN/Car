@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Martian+Mono:wght@600;700&family=Poppins&family=Roboto+Mono:wght@400;600&display=swap");
+/* font-family: 'Lilita One', cursive;
+font-family: 'Martian Mono', monospace;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  overflow: hidden;
+}
+header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 18vh;
+  font-family: "Lilita One", cursive;
+  font-size: 1.7rem;
+  animation: header 2s ease;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+nav h2 {
+  position: relative;
+  margin-left: 2rem;
+  background: rebeccapurple;
+  clip-path: circle(40%);
+  padding: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 1s ease;
+}
+nav h2:hover {
+  transform: scale(0.9);
+}
+nav .lists {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lists li {
+  list-style: none;
+  border-radius: 20px;
+  padding: 20px 40px;
+  margin: 0 1rem;
+}
+li {
+  /* background: orangered; */
+  cursor: pointer;
+}
+li.addColor {
+  background: orangered;
+}
+
+/*  */
+.container {
+  width: 100%;
+  color: wheat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+.content {
+  width: 50%;
+  margin-left: 3rem;
+  padding: 40px 20px;
+  z-index: 2;
+  animation: TextContent 1.5s ease;
+}
+.title {
+  font-size: 1.8rem;
+  font-family: "Martian Mono", cursive;
+  word-spacing: -10px;
+  color: goldenrod;
+}
+.sec_title h3 {
+  font-size: 2rem;
+  font-family: "Poppins";
+}
+.sec_title span {
+  color: #1be7ff;
+}
+.quote {
+  font-size: 2.5rem;
+}
+.quote small {
+  font-weight: 800;
+  font-family: "Roboto mono";
+  letter-spacing: -2px;
+  color: #ff3c38;
+}
+.buttons {
+  padding: 10px;
+}
+button {
+  position: relative;
+  padding: 14px 40px;
+  margin-right: 2rem;
+  font-family: Poppins;
+  font-weight: 700;
+  background: transparent;
+  color: #1be7ff;
+  border: 4px groove #1be7ff;
+  cursor: pointer;
+  border-radius: 12px;
+  z-index: 1;
+}
+button:hover {
+  transition-delay: 0.5s;
+  color: white;
+}
+button::before {
+  content: "";
+  width: 0%;
+  background: #002626;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 8px;
+  transform: scale(1);
+  transform-origin: left;
+  transition: 1.2s ease;
+}
+button:hover::before {
+  width: 100%;
+}
+.carImg {
+  width: 50%;
+}
+.carImg img {
+  width: 700px;
+  z-index: -2;
+  animation: Car 6s ease-out;
+}
+.carImg.start {
+  animation: ride infinite 8s ease-out;
+}
+/*Keyframes*/
+@keyframes header {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes TextContent {
+  0% {
+    transform: translateX(-80%);
+  }
+}
+@keyframes Car {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+/*Js Add_eventListener After*/
+@keyframes ride {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+/* Media Query */
+@media screen and (max-width: 1200px) {
+  .content {
+    width: 100%;
+    text-align: center;
+  }
+  .carImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .carImg img {
+    width: 20rem;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    height: 18vh;
+    font-size: 1.4rem;
+    animation: header 2s ease;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  nav h2 {
+    margin-left: 1rem;
+    padding: 20px;
+    font-size: 1rem;
+  }
+  .lists li {
+    padding: 10px 10px;
+    margin: 0 0.2rem;
+  }
+  /*  */
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .content {
+    width: 100%;
+    animation: TextContent 1.5s ease;
+  }
+  .title {
+    font-size: 1.4rem;
+  }
+  .sec_title h3 {
+    margin-bottom: 1.2rem;
+  }
+  .quote {
+    margin-bottom: 1.2rem;
+  }
+  button {
+    padding: 14px 40px;
+    margin-bottom: 1.4rem;
+  }
+  .carImg {
+    width: 100%;
+  }
+  .carImg img {
+    width: 30rem;
+    margin-bottom: 4rem;
+  }
+}

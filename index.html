@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2>Logo</h2>
+        <ul class="lists">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="content">
+        <div class="title">
+          <h1>TATA ALTROZ</h1>
+        </div>
+        <div class="sec_title">
+          <h3>Brand New <span>Tata Altroz XZ Urban</span></h3>
+        </div>
+        <div class="quote">
+          <small>Here's to more road trips ahead</small>
+        </div>
+        <div class="buttons">
+          <button>Get Started</button>
+          <button id="ride">Take A Ride</button>
+        </div>
+      </div>
+      <div class="carImg" id="StartRide">
+        <img src="img/car.gif" alt="" />
+      </div>
+    </div>
+
+    <script>
+      let List = document.querySelectorAll("li");
+      List.forEach((child) => {
+        child.addEventListener("click", () => {
+          child.classList.toggle("addColor");
+        });
+      });
+      let Ride = document.getElementById("ride");
+      let StartRide = document.getElementById("StartRide");
+      Ride.addEventListener("click", () => {
+        StartRide.classList.toggle("start");
+      });
+
+      console.log(Ride);
+      console.log(StartRide);
+    </script>
+  </body>
+</html>
