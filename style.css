@@ -223,6 +223,7 @@ button:hover::before {
   }
   .content {
     width: 100%;
+    margin:auto;
     animation: TextContent 1.5s ease;
   }
   .title {
