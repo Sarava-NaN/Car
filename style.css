@@ -242,7 +242,7 @@ button:hover::before {
     width: 100%;
   }
   .carImg img {
-    width: 30rem;
+    width: 25rem;
     margin-bottom: 4rem;
   }
 }
