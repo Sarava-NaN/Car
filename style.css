@@ -220,6 +220,7 @@ button:hover::before {
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
+    gap:8rem;
   }
   .content {
     width: 100%;
