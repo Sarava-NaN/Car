@@ -220,7 +220,6 @@ button:hover::before {
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
-    gap:8rem;
   }
   .content {
     width: 100%;
@@ -242,6 +241,7 @@ button:hover::before {
   }
   .carImg {
     width: 100%;
+    margin-top:4rem;
   }
   .carImg img {
     width: 25rem;
